@@ -14,8 +14,8 @@ import { createProject } from '../../store/actions/projectActions';
     }
     handleClick = (e) => {
         e.preventDefault();
-        console.log(this.state)
-        this.props.createProject(this.state)
+        console.log(this.state);
+        this.props.createProject(this.state);
     }
 
   render() {
