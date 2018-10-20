@@ -16,6 +16,8 @@ import { Redirect } from 'react-router-dom';
         e.preventDefault();
         //console.log(this.state);
         this.props.createProject(this.state);
+        this.props.history.push('/'); 
+        //it likes <Redirect to='/' />
     }
 
   render() {
