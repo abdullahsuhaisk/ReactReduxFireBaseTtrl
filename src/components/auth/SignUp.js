@@ -21,7 +21,7 @@ import { Redirect } from 'react-router-dom';
     }
   render() {
     // console.log(this.props);
-    const {auth} = this.props;
+    const {auth, authError} = this.props;
     if(!auth.uid)  return (
       <div className="container">
         <form className="white">
@@ -46,6 +46,9 @@ import { Redirect } from 'react-router-dom';
             </div>
             <div className="input-field">
                 <button onClick={this.handleClick}>Sign Up</button>
+                <div className="red-text center">
+                    {authError ? <p>{authError}</p> : null}
+                </div>
             </div>
         </form>
       </div>
@@ -56,7 +59,8 @@ import { Redirect } from 'react-router-dom';
 const mapStateToProps = (state) => {
     //console.log(state);
     return ({
-        auth: state.firebase.auth
+        auth: state.firebase.auth,
+        authError:state.auth.authError
     })
 }
 

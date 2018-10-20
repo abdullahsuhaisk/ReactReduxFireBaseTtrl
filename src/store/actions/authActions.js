@@ -29,7 +29,7 @@ export const signUp = (newUser) => {
         newUser.password
       ).then(resp => {
           console.log(resp);
-        return firestore.collection('users').doc(resp.user.uid).set({
+        return firestore.collection('users').doc(resp.user.uid).set({ //Nested Document
           email:newUser.email,
           firstName: newUser.firstName,
           lastName: newUser.lastName,
