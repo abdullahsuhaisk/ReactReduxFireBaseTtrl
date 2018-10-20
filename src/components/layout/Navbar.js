@@ -5,7 +5,7 @@ import SignOutLinks from './SignedOutLinks';
 import { connect } from 'react-redux';
 
 const Navbar = (props) => {
-    console.log(props);
+    // console.log(props);
     const { auth } = props;
     const Links = auth.uid ? <SignInLinks /> :  <SignOutLinks />
     return (

@@ -3,8 +3,6 @@ import ProjectSummary from './ProjectSummary';
 import { Link } from 'react-router-dom';
 
 const ProjectList = ({projects}) => {
-    var a =projects
-    console.log(a)
     return(
         <div className="project-list section">
             {
