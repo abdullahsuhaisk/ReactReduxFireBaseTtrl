@@ -7,7 +7,7 @@ import ProjectDetails from './components/projects/ProjectDetails';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import ProjectNew from './components/projects/ProjectNew';
-
+import Test from './components/test'
 
 class App extends Component {
   render() {
@@ -21,6 +21,7 @@ class App extends Component {
           <Route path="/signIn" component={SignIn} />
           <Route path="/signUp" component={SignUp} />
           <Route path="/newProject" component={ProjectNew} />
+          <Route path="/test" component={Test} />
         </Switch>
       </div>
       </BrowserRouter>
